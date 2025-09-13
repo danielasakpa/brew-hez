@@ -85,9 +85,9 @@ export const teamMembers = [
 ];
 
 export const companyInfo = {
-  name: "Artisan Coffee Co.",
+  name: "Brew Hez",
   description:
-    "Founded in 2010, Artisan Coffee Co. is dedicated to bringing you the world's finest coffee beans, carefully sourced and expertly roasted. We believe that great coffee brings people together and creates moments of joy in everyday life.",
+    "Founded in 2010, Brew Hez is dedicated to bringing you the world's finest coffee beans, carefully sourced and expertly roasted. We believe that great coffee brings people together and creates moments of joy in everyday life.",
   mission:
     "To source, roast, and serve exceptional coffee while supporting sustainable farming practices and building lasting relationships with coffee growers worldwide.",
   values: [
