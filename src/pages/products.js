@@ -4,8 +4,8 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFilter, faSearch } from "@fortawesome/free-solid-svg-icons";
-import ProductCard from "../components/ProductCard";
-import OrderModal from "../components/OrderModal";
+import ProductCard from "../Components/ProductCard";
+import OrderModal from "../Components/OrderModal";
 import { coffeeProducts } from "../lib/demoData";
 
 const ProductsPage = () => {
@@ -73,18 +73,18 @@ const ProductsPage = () => {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <section className="bg-gradient-to-br from-custom to-amber-900 text-tertiary py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-20 bg-gradient-to-br from-custom to-amber-900 text-tertiary">
+        <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-            <h1 className="text-4xl lg:text-5xl font-bold mb-6 text-balance">
+            <h1 className="mb-6 text-4xl font-bold lg:text-5xl text-balance">
               Premium Coffee Collection
             </h1>
-            <p className="text-xl lg:text-2xl max-w-3xl mx-auto leading-relaxed text-pretty">
+            <p className="max-w-3xl mx-auto text-xl leading-relaxed lg:text-2xl text-pretty">
               Discover our carefully curated selection of the world's finest
               coffee beans, each with its own unique flavor profile and story.
             </p>
@@ -93,14 +93,14 @@ const ProductsPage = () => {
       </section>
 
       {/* Filters bar */}
-      <section className="py-8 bg-tertiary border-b border-gray-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row gap-4 items-center justify-between">
+      <section className="py-8 border-b border-gray-200 bg-tertiary">
+        <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+          <div className="flex flex-col items-center justify-between gap-4 md:flex-row">
             {/* Search input */}
             <div className="relative flex-1 max-w-md">
               <FontAwesomeIcon
                 icon={faSearch}
-                className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-4 w-4"
+                className="absolute w-4 h-4 text-gray-400 transform -translate-y-1/2 left-3 top-1/2"
                 aria-label="Search icon"
               />
               <input
@@ -108,7 +108,7 @@ const ProductsPage = () => {
                 placeholder="Search coffee..."
                 value={searchTerm}
                 onChange={handleSearchChange}
-                className="w-full pl-10 pr-4 py-2 bg-white border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                className="w-full py-2 pl-10 pr-4 bg-white border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
                 aria-label="Search coffee products"
               />
             </div>
@@ -117,7 +117,7 @@ const ProductsPage = () => {
             <div className="flex items-center space-x-2">
               <FontAwesomeIcon
                 icon={faFilter}
-                className="text-gray-600 h-4 w-4"
+                className="w-4 h-4 text-gray-600"
                 aria-label="Filter icon"
               />
               <select
@@ -134,7 +134,7 @@ const ProductsPage = () => {
             </div>
 
             {/* Results counter */}
-            <div className="text-gray-600 text-sm">
+            <div className="text-sm text-gray-600">
               {filteredProducts.length}{" "}
               {filteredProducts.length === 1 ? "product" : "products"} found
             </div>
@@ -144,9 +144,9 @@ const ProductsPage = () => {
 
       {/* Products listing */}
       <section className="py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
           {filteredProducts.length > 0 ? (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
               {filteredProducts.map((product, index) => (
                 <motion.div
                   key={product.id}
@@ -165,12 +165,12 @@ const ProductsPage = () => {
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              className="text-center py-16"
+              className="py-16 text-center"
             >
-              <div className="text-gray-400 mb-4">
-                <FontAwesomeIcon icon={faSearch} className="h-16 w-16" />
+              <div className="mb-4 text-gray-400">
+                <FontAwesomeIcon icon={faSearch} className="w-16 h-16" />
               </div>
-              <h3 className="text-xl font-semibold text-gray-600 mb-2">
+              <h3 className="mb-2 text-xl font-semibold text-gray-600">
                 No products found
               </h3>
               <p className="text-gray-500">

@@ -70,7 +70,7 @@ Example `tailwind.config.js`:
 
 ```js
 module.exports = {
-  content: ["./pages/**/*.{js,jsx}", "./components/**/*.{js,jsx}"],
+  content: ["./pages/**/*.{js,jsx}", "./Components/**/*.{js,jsx}"],
   theme: {
     extend: {
       colors: {

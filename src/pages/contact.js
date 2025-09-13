@@ -3,7 +3,7 @@
 import { motion } from "framer-motion"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faPhone, faEnvelope, faMapMarkerAlt, faClock, faComments } from "@fortawesome/free-solid-svg-icons"
-import ContactForm from "../components/ContactForm"
+import ContactForm from "../Components/ContactForm"
 
 const ContactPage = () => {
   const contactInfo = [

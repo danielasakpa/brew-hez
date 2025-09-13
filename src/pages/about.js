@@ -3,7 +3,7 @@
 import { motion } from "framer-motion"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faCheckCircle } from "@fortawesome/free-solid-svg-icons"
-import TeamMemberCard from "../components/TeamMemberCard"
+import TeamMemberCard from "../Components/TeamMemberCard"
 import { companyInfo, teamMembers } from "../lib/demoData"
 
 const AboutPage = () => {
